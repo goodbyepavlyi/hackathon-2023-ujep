@@ -4,7 +4,7 @@ import {MapContainer, TileLayer, Marker, useMap, AttributionControl, ZoomControl
 import {Icon} from "leaflet";
 import {divIcon} from "leaflet/src/layer";
 import ReactDOMServer from "react-dom/server";
-import {MdLocationOn} from "react-icons";
+import {FaCircle} from "react-icons/fa";
 
 export function ChangeView({ coords, zoom }) {
     const map = useMap();
@@ -32,7 +32,7 @@ export default function Map(props) {
                 <Marker position={[geoData.lat, geoData.lng]} icon={divIcon({
                     className: 'location-icon',
                     iconAnchor: [props.markerSize/2, props.markerSize],
-                    html: ReactDOMServer.renderToString(<MdLocationOn size={props.markerSize} color='#3535dd' />)
+                    html: ReactDOMServer.renderToString(<FaCircle size={props.markerSize} color='#3535dd' />)
                 })}/>
             )}
             <ChangeView coords={center} zoom={props.zoom} />
