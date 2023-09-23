@@ -34,7 +34,7 @@ export default function Map(){
                 <button onClick={() => setFiltersOpen(!filtersOpen)} className={"absolute z-[9800] top-0 right-0 bg-[#171717] m-5 p-2 rounded-[2px] text-[22px]"}>
                     <BsFilter/>
                 </button>
-                <div className={`w-96 h-full bg-neutral-800 absolute right-0 z-[9750] ease-in transition-all translate-x-96 ${filtersOpen ? "translate-x-0" : "translate-x-96"}`}>
+                <div className={`w-96 h-full bg-neutral-800 absolute right-0 z-[9750] ease-in transition-all ${filtersOpen ? "translate-x-0" : "translate-x-96"}`}>
                     <div className={"flex flex-col py-24 justify-center items-center px-16"}>
                         <h1 className={"text-3xl font-medium mb-12"}>Filters</h1>
                         <form onSubmit={handleSubmitDates} className={"flex flex-col gap-3 w- items-center w-full"}>
