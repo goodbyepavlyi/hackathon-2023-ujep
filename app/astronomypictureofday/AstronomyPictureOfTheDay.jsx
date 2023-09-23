@@ -20,7 +20,7 @@ export default function AstronomyPictureOfTheDay() {
         <>
             <div className={"flex container mx-auto gap-4 py-4"}>
                 <img src={astronomyPicture.url} className={"max-w-4xl"}></img>
-
+            </div>
             <div className="flex flex-row container items-center justify-end gap-x-4 mx-auto">
                 <input type="date" value={selectedDate} onChange={handleDateChange}
                     className="shadow rounded py-2 px-3 bg-indigo-700 text-white font-bold focus:outline-none focus:shadow-outline" />
