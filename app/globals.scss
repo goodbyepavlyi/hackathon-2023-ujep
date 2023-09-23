@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #171717;
+    color: #fafafa;
+}
+
+.swiper-pagination-bullet {
+    background: #fafafa !important;   
+}
+
+.leaflet-control-attribution{
+    background-color: #171717 !important;
+}
+.leaflet-control-zoom{
+    border: 0;
+    .leaflet-control-zoom-in, .leaflet-control-zoom-out{
+        background-color: #171717 !important;
+        color: white;
+        border: 0;
+    }
+}
