@@ -7,7 +7,7 @@ import NASA from "@/libs/Api/NASA";
 export default function AstronomyPictureOfTheDay() {
     const today = new Date().toISOString().split("T")[0];
     const [selectedDate, setSelectedDate] = useState(today);
-    const { data: astronomyPicture, error } = useSWR(
+    const { data, error } = useSWR(
         selectedDate,
         NASA.fetchAPOD
     );
@@ -24,25 +24,23 @@ export default function AstronomyPictureOfTheDay() {
             </div>
 
             <div className="flex container mx-auto gap-4 p-4 flex-wrap xl:flex-nowrap">
-                {error ? (
-                    <p>Error loading data.</p>
-                ) : !astronomyPicture ? (
-                    <p>Loading...</p>
-                ) : (
+                {data && !data?.code ? (
                     <>
-                        <img
-                            src={astronomyPicture.url}
-                            className="w-full xl:w-[50%] object-contain rounded"
-                            alt={astronomyPicture.title}
-                        />
-                        
-                        <div className="mx-4">
-                            <p className="text-md text-indigo-500">{astronomyPicture.date}</p>
-                            <p className="text-3xl font-semibold mb-2">{astronomyPicture.title}</p>
-                            <p className="text-1xl mb-4">Copyright: {astronomyPicture.copyright}</p>
-                            <p className="text-lg">{astronomyPicture.explanation}</p>
-                        </div>
-                    </>
+                    <img
+                        src={data.url}
+                        className="w-full xl:w-[50%] object-contain rounded"
+                        alt={data.title}
+                    />
+                    
+                    <div className="mx-4">
+                        <p className="text-md text-indigo-500 font-bold">{data.date}</p>
+                        <p className="text-3xl font-semibold mb-2">{data.title}</p>
+                        <p className="text-1xl mb-4"><span className="font-bold">Autor:</span> {data.copyright}</p>
+                        <p className="text-lg">{data.explanation}</p>
+                    </div>
+                </>
+                ) : (
+                    <p className="text-lg font-medium">Chyba při načítaní dat.</p>
                 )}
             </div>
         </>
