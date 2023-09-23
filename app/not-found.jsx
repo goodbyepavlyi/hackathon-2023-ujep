@@ -15,7 +15,7 @@ export default function NotFoundPage() {
                                 Page not <span class={"relative rounded bg-indigo-600 px-3 py-1 text-white"}>found</span>
                             </h1>
 
-                            <p className={"my-6 leading-normal text-neutral-300"}>You've found yourself on a page that seems to be unfamiliar to us.</p>
+                            <p className={"my-6 leading-normal text-neutral-300"}>You&apos;ve found yourself on a page that seems to be unfamiliar to us.</p>
                             <a href="/" className={"bg-indigo-500 hover:bg-indigo-600 font-bold py-2 px-4 rounded"}>Return</a>
                         </div>
                     </div>

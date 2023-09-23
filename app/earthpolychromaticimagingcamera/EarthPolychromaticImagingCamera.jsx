@@ -84,7 +84,7 @@ export default async function EarthPolychromaticImagingCamera() {
                             const imageUrl = `https://epic.gsfc.nasa.gov/archive/natural/${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate()}/png/${data.image}.png`;
 
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={data.identifier}>
                                     <img src={imageUrl} />
                                 </SwiperSlide>
                             );
