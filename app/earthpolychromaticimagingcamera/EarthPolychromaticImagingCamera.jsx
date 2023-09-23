@@ -75,7 +75,6 @@ export default async function EarthPolychromaticImagingCamera() {
                 <h1 className="text-3xl font-bold">Polychromatická země</h1>
             </div>
 
-            {/* <div className={"flex container justify-center mx-auto gap-4 py-4"}> */}
             <div className={"grid grid-cols-1 md:grid-cols-2 grid-row-2 md:grid-row-1 container justify-center mx-auto py-4"}>
                 <div className={"max-w-[38rem] rounded overflow-hidden"}>
                     <Swiper loop={true} pagination={{ clickable: true }} modules={[Pagination]} className="swiper">
