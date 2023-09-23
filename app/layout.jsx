@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'NASA Space',
+
 }
 
 export default function RootLayout({ children }) {
