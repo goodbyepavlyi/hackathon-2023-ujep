@@ -11,7 +11,7 @@ export default function Header() {
         <>
             <header className="header">
                 <div className={"w-full overflow-hidden"}>
-                    <nav className="container mx-auto max-w-7xl flex justify-between items-center p-4 relative bg-neutral-900 z-[10000] h-[80px]">
+                    <nav className="px-12 mx-auto w-full flex justify-between items-center p-4 relative z-[10000] h-[80px] bg-neutral-900">
                         <Image src={NasaLogo} alt={"NASA"} height={40}/>
                         <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden min-[325px]:block">Průzkumník Otevřených Dat NASA</a>
                         <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden max-[325px]:block">PODN</a>
