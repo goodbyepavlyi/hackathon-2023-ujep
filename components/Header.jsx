@@ -13,8 +13,8 @@ export default function Header() {
                 <div className={"w-full overflow-hidden"}>
                     <nav className="px-12 mx-auto w-full flex justify-between items-center p-4 relative z-[10000] h-[80px] bg-neutral-900">
                         <Image src={NasaLogo} alt={"NASA"} height={40}/>
-                        <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden min-[325px]:block">Průzkumník Otevřených Dat NASA</a>
-                        <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden max-[325px]:block">PODN</a>
+                        <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden min-[600px]:block">Průzkumník Otevřených Dat NASA</a>
+                        <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden max-[600px]:block">PODN</a>
 
                         <div data-navbar="" className="hidden md:flex items-center flex-1 justify-end gap-x-6">
                             <a href="/map" className="font-semibold leading-6">Mapa asteroidů</a>
