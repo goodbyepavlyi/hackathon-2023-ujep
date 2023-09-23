@@ -8,8 +8,8 @@ module.exports = {
         return data;
     },
     
-    fetchAPOD: async function() {
-        const response = await fetch(config.AstronomyPictureOfDayApiRoute);
+    fetchAPOD: async function(date) {
+        const response = await fetch(`${config.AstronomyPictureOfDayApiRoute}&date=${date || "today"}`);
         const data = await response.json();
         
         return data;
