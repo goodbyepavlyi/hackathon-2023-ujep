@@ -10,7 +10,7 @@ export default function Home() {
                     <div className={"flex flex-col place-items-center gap-10 lg:flex-row lg:gap-4"}>
                         <div className={"flex flex-col place-items-center text-center"}>
                             <h1 className={"rounded bg-indigo-600 px-3 py-1 text-3xl font-black leading-tight sm:text-6xl sm:leading-tight"}>
-                                Průzkumník Otevřených Dat NASA
+                                Průzkumník otevřených dat NASA
                             </h1>
                             <p className={"my-6 leading-normal text-neutral-300"}>
                                 Objevujte meteority, které v posledních 2000 letech spadly na Zemi a užívejte si hypnotizující Astronomický obrázek dne od NASA.
