@@ -30,9 +30,6 @@ export default function Map(){
     return (
         <>
             <Loader />
-            {/* <div className={"w-full h-screen absolute top-0 flex justify-center items-center "}>
-                <img src={"/loading.gif"} alt={"Loading"}/>
-            </div> */}
             <div className={"relative w-screen h-[calc(100vh-80px)] overflow-hidden"}>
                 <button onClick={() => setFiltersOpen(!filtersOpen)} className={"absolute z-[9800] top-0 right-0 bg-[#171717] m-5 p-2 rounded-[2px] text-[22px]"}>
                     <BsFilter/>
