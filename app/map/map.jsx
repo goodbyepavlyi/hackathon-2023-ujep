@@ -15,7 +15,6 @@ export default function Map(){
     const [startDate, setStartDate] = useState(0);
     const [endDate, setEndDate] = useState(dayjs().year());
     const [filtersOpen, setFiltersOpen] = useState(false);
-
     const handleSubmitDates = (e) => {
         e.preventDefault();
 
@@ -35,9 +34,9 @@ export default function Map(){
                     <BsFilter/>
                 </button>
                 <div className={`w-96 h-full bg-neutral-800 absolute right-0 z-[9750] ease-in transition-all ${filtersOpen ? "translate-x-0" : "translate-x-96"}`}>
-                    <div className={"flex flex-col py-24 justify-center items-center px-16"}>
+                    <div className={"flex flex-col py-24 justify-center items-center"}>
                         <h1 className={"text-3xl font-medium mb-12"}>Filters</h1>
-                        <form onSubmit={handleSubmitDates} className={"flex flex-col gap-3 w- items-center w-full"}>
+                        <form onSubmit={handleSubmitDates} className={"flex flex-col gap-3 w- items-center w-full px-16"}>
                             <label className={"w-full"}>
                                 <span className={"block text-sm font-medium mb-1"}>Start Date</span>
                                 <input className={"bg-neutral-700 w-full p-1 rounded"} name={"startDate"} type={"text"} defaultValue={startDate}/>

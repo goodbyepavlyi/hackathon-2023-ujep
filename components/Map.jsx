@@ -54,7 +54,12 @@ export default function Map(props) {
                                 <h1 className={"font-extrabold"}>{data.name}</h1>
                                 <hr/>
                                 <span>{data.mass ? `Hmotnost: ${data.mass.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} g` : "Neznámá hmotnost"}</span><br/>
-                                <span>{data.year ? `Nalezen v roce ${year}` : "Neznámý rok nálezu"}</span>
+                                <span>{data.year ? `Nalezen v roce ${year}` : "Neznámý rok nálezu"}</span><br/>
+                                <span title={
+                                    data.recclass.match(/^L[1-9].*$/gm) ? "Nízký obsah kovů" : 
+                                    data.recclass.match(/^LL[1-9].*$/gm) ? "Nízký obsah kovů, nízký obsah železa" :
+                                    data.recclass.match(/^H[1-9].*$/gm) ? "Vysoký obsah kovů" : undefined
+                                }>{data.recclass ? `Třída ${data.recclass}` : "Neznámá třída"}</span>
                             </Popup>
                         </Marker>
                         )
