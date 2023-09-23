@@ -1,11 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
-// import NASA from "@/libs/Api/NASA";
 import { BsFilter } from "react-icons/bs";
 import $ from "jquery";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import Loader from "@/components/Loader";
 
 const MapWithNoSSR = dynamic(() => import('/components/Map'), {
     ssr: false,
@@ -29,9 +29,10 @@ export default function Map(){
 
     return (
         <>
-            <div className={"w-full h-screen absolute top-0 flex justify-center items-center "}>
+            <Loader />
+            {/* <div className={"w-full h-screen absolute top-0 flex justify-center items-center "}>
                 <img src={"/loading.gif"} alt={"Loading"}/>
-            </div>
+            </div> */}
             <div className={"relative w-screen h-[calc(100vh-80px)] overflow-hidden"}>
                 <button onClick={() => setFiltersOpen(!filtersOpen)} className={"absolute z-[9800] top-0 right-0 bg-[#171717] m-5 p-2 rounded-[2px] text-[22px]"}>
                     <BsFilter/>

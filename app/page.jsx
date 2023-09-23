@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import style from "./Home.module.scss";
-import nasaLogo from '@/public/logo.svg';
 import Header from '@/components/Header';
 
 export default function Home() {
