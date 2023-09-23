@@ -70,14 +70,14 @@ export default async function EarthPolychromaticImagingCamera() {
 
 
     return (
-        <>
+        <main className={"px-2"}>
             <div className="flex flex-col items-center">
                 <h1 className="text-3xl font-bold">Polychromatická země</h1>
             </div>
 
             {/* <div className={"flex container justify-center mx-auto gap-4 py-4"}> */}
-            <div className={"grid grid-cols-2 grid-row-1 container justify-center mx-auto py-4"}>
-                <div className={"max-w-[38rem]"}>
+            <div className={"grid grid-cols-1 md:grid-cols-2 grid-row-2 md:grid-row-1 container justify-center mx-auto py-4"}>
+                <div className={"max-w-[38rem] rounded overflow-hidden"}>
                     <Swiper loop={true} pagination={{ clickable: true }} modules={[Pagination]} className="swiper">
                         {epicNatural.map(data => {
                             const date = new Date(data.date);
@@ -92,7 +92,7 @@ export default async function EarthPolychromaticImagingCamera() {
                     </Swiper>
                 </div>
 
-                <div className={"mx-4"}>
+                <div className={"mx-4 my-8 md:my-auto"}>
                     <div className="text-center">
                         <div className='grid grid-cols-2 grid-rows-1'>
                             <div className="my-4">
@@ -102,7 +102,7 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaSun />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>Earth to Sun</p>
+                                <p className={"pb-1 text-lg font-bold"}>Země ke Slunci</p>
                                 <p className={"text-gray-300"}>{Math.round(earthToSunDistance).toLocaleString()} km</p>
                             </div>
 
@@ -113,7 +113,7 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaMoon />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>Earth to Moon</p>
+                                <p className={"pb-1 text-lg font-bold"}>Země k Měsíci</p>
                                 <p className={"text-gray-300"}>{Math.round(earthToMoonDistance).toLocaleString()} km</p>
                             </div>
                         </div>
@@ -126,7 +126,7 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaSun />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>EPIC to Sun</p>
+                                <p className={"pb-1 text-lg font-bold"}>EPIC ke Slunci</p>
                                 <p className={"text-gray-300"}>{Math.round(dscovrToSunDistance).toLocaleString()} km</p>
                             </div>
 
@@ -137,7 +137,7 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaMoon />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>EPIC to Moon</p>
+                                <p className={"pb-1 text-lg font-bold"}>EPIC k Měsíci</p>
                                 <p className={"text-gray-300"}>{Math.round(dscovrToMoonDistance).toLocaleString()} km</p>
                             </div>
                         </div>
@@ -150,7 +150,7 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaSatellite />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>Earth to EPIC</p>
+                                <p className={"pb-1 text-lg font-bold"}>Země k EPIC</p>
                                 <p className={"text-gray-300"}>{Math.round(earthToDscovrDistance).toLocaleString()} km</p>
                             </div>
 
@@ -161,13 +161,13 @@ export default async function EarthPolychromaticImagingCamera() {
                                     <FaSatellite />
                                 </div>
 
-                                <p className={"pb-1 text-lg font-bold"}>SEV Angle</p>
+                                <p className={"pb-1 text-lg font-bold"}>SEV Úhel</p>
                                 <p className={"text-gray-300"}>{sevAngle.toFixed(2)} &deg;</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     )
 }

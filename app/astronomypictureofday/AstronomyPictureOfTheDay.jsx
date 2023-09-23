@@ -6,8 +6,8 @@ export default async function AstronomyPictureOfTheDay() {
 
     return (
         <>
-            <div className={"flex container mx-auto gap-4 py-4"}>
-                <img src={astronomyPicture.url} className={"max-w-4xl"}></img>
+            <div className={"flex container mx-auto gap-4 p-4 flex-wrap lg:flex-nowrap"}>
+                <img src={astronomyPicture.url} className={"w-full lg:w-[50%] rounded object-contain"}></img>
 
                 <div className={"mx-4"}>
                     <p className={"text-md text-indigo-500"}>{astronomyPicture.date}</p>
