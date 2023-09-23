@@ -17,7 +17,7 @@ export default function Header() {
                         <a href="/" className="flex-1 text-xl font-semibold ml-1 hidden max-[600px]:block">PODN</a>
 
                         <div data-navbar="" className="hidden md:flex items-center flex-1 justify-end gap-x-6">
-                            <a href="/map" className="font-semibold leading-6">Mapa asteroidů</a>
+                            <a href="/map" className="font-semibold leading-6">Mapa meteorů</a>
                             <a href="/astronomypictureofday" className="font-semibold leading-6">Astronomický snímek dne</a>
                             <a href="/earthpolychromaticimagingcamera" className="font-semibold leading-6">Polychromatická země</a>
                         </div>
@@ -25,7 +25,7 @@ export default function Header() {
                     </nav>
                     <div className={`absolute w-full h-screen bg-neutral-800 bottom-0 z-[9900] transition-[bottom] ease-in-out duration-500 ${open ? "bottom-0" : "bottom-full"}`}>
                         <ul className={"w-full relative h-full flex flex-col items-center justify-center gap-12 text-2xl"}>
-                            <li><a href="/map" className="font-semibold leading-6">Mapa asteroidů</a></li>
+                            <li><a href="/map" className="font-semibold leading-6">Mapa meteorů</a></li>
                             <li><a href="/astronomypictureofday" className="font-semibold leading-6">Astronomický snímek dne</a></li>
                             <li><a href="/earthpolychromaticimagingcamera" className="font-semibold leading-6">Polychromatická země</a></li>
                         </ul>

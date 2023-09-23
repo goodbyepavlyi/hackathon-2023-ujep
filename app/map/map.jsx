@@ -33,6 +33,7 @@ export default function Map(){
                 <button onClick={() => setFiltersOpen(!filtersOpen)} className={"absolute z-[9800] top-0 right-0 bg-[#171717] m-5 p-2 rounded-[2px] text-[22px]"}>
                     <BsFilter/>
                 </button>
+                
                 <div className={`w-96 h-full bg-neutral-800 absolute right-0 z-[9750] ease-in transition-all ${filtersOpen ? "translate-x-0" : "translate-x-96"}`}>
                     <div className={"flex flex-col py-24 justify-center items-center"}>
                         <h1 className={"text-3xl font-medium mb-12"}>Filters</h1>
@@ -47,6 +48,8 @@ export default function Map(){
                             </label>
                             <input className={"bg-indigo-600 py-2 px-4 rounded"} type={"submit"} value={"Filter"}/>
                         </form>
+                        
+                        <a href="/tridyMeteoritu" className="font-semibold underline leading-6 mt-3">Třídy meteoritů</a>
                     </div>
                 </div>
                 <MapWithNoSSR 
