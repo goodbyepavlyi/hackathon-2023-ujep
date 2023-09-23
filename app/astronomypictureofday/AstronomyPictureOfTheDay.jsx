@@ -40,7 +40,7 @@ export default function AstronomyPictureOfTheDay() {
                     </div>
                 </>
                 ) : (
-                    <p className="text-lg font-medium">Chyba při načítaní dat.</p>
+                    <p className="text-lg font-medium">Načítaní dat..</p>
                 )}
             </div>
         </>
