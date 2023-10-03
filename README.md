@@ -13,7 +13,7 @@
 
 #### 1. Clone the GitHub repository:
 ```bash
-git clone https://github.com/Jakooob14/hackithon-websteri/
+git clone https://github.com/goodbyepavlyi/hackathon-2023-ujep/
 ```
 
 #### 2. Run the development server:
